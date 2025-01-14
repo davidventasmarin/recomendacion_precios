@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="recomendacion_precios.list">
+      <field name="name">recomendacion_precios list</field>
+      <field name="model">recomendacion_precios.recomendacion_precios</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="recomendacion_precios.action_window">
+      <field name="name">recomendacion_precios window</field>
+      <field name="res_model">recomendacion_precios.recomendacion_precios</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="recomendacion_precios.action_server">
+      <field name="name">recomendacion_precios server</field>
+      <field name="model_id" ref="model_recomendacion_precios_recomendacion_precios"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="recomendacion_precios" id="recomendacion_precios.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="recomendacion_precios.menu_1" parent="recomendacion_precios.menu_root"/>
+    <menuitem name="Menu 2" id="recomendacion_precios.menu_2" parent="recomendacion_precios.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="recomendacion_precios.menu_1_list" parent="recomendacion_precios.menu_1"
+              action="recomendacion_precios.action_window"/>
+    <menuitem name="Server to list" id="recomendacion_precios" parent="recomendacion_precios.menu_2"
+              action="recomendacion_precios.action_server"/>
+-->
+  </data>
+</odoo>

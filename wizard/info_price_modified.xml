@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="trescarroceros_change_price_purchase_form" model="ir.ui.view">
+        <field name="name">trescarroceros.change.price.purchase.form</field>
+        <field name="model">change.price.purchase.wizard</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="product_template_id" invisible="1"/>
+                    <field name="category_id" invisible="1"/>
+                    <field name="price_unit"/>
+                    <field name="ultimo_precio_de_compra"/>
+                    <field name="beneficio_taller"/>
+                    <field name="beneficio_tienda"/>
+                    <field name="pvp_taller"/>
+                    <field name="pvp_tienda"/>
+                    <field name="pvp_sugerido_taller"/>
+                    <field name="pvp_sugerido_tienda"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_open_info_price_modified" 
+        model="ir.actions.act_window">
+        <field name="name">Change price purchase</field>
+        <field name="res_model">change.price.purchase.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
